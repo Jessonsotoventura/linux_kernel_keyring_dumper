@@ -1,0 +1,8 @@
+# Build:
+$ make
+
+# usage:
+
+insmod keydumper.ko keyid="The key to dump's serial id" keytype="type of key"
+
+use `dmesg` to view the dumped key

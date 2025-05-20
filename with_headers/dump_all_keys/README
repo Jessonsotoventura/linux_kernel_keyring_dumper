@@ -1,0 +1,7 @@
+# Build:
+$ make
+
+# usage:
+
+insmod keydumper.ko user_key="Any key's serial ID"
+use `dmesg` to check the output

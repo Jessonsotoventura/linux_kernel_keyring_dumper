@@ -1,0 +1,32 @@
+# Building modules for x86_64 Architectures
+
+1. Using an x86 host, compile the .c files using:
+
+```
+gcc -c <FILENAME>.c -o <FILENAME>.ko
+```
+
+# Building modules for AArch64 Architectures
+
+1. Download an appropriate bare-metal toolchain, such from here:
+https://developer.arm.com/downloads/-/arm-gnu-toolchain-downloads
+
+2. You will want to the AArch64 bare-metal target for your operating system
+3. Once extracted, use the following to build: 
+
+```
+/bin/aarch64-none-elf-gcc -c  <FILENAME>.c -o <FILENAME>.ko
+```
+
+# Running:
+
+1. Launch the image by using ./start-qemu.sh
+2. Login using root <empty password>
+3. Alternatively ssh into the emulator using ssh root@127.0.0.1 -p2222
+4. Use root:<empty_password> to login
+5. Copy over the kernel module using scp
+6. insmod <kernel.ko>
+7. See dmesg for the results
+
+**Note:**: Use ctrl-a x to exit QEMU 
+

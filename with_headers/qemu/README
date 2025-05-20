@@ -1,0 +1,20 @@
+# Kernel Key Retention Service Demo Image 
+
+The following is an x86_64 Linux image created to aid in understanding the Kernel Key Retention Service (KKRS) and how key material stored within KKRS can be recovered via a Kernel Module. 
+
+The following key types are supported by this Linux Image:
+
+- User
+- Logon
+- Asymmetric PKCS#8
+- Asymmetric X.509
+
+## Installation:
+
+- https://www.qemu.org/download/#linux
+
+## Usage:
+
+- Start the image using: ./start.sh
+- Login using `ssh root@127.0.0.1 -p 2222` and the password `root`
+
